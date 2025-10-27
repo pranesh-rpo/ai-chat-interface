@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chat Interface</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Assistant</h1>
+        </header>
+        <div id="chat">
+            <div id="messages"></div>
+        </div>
+        <div class="input-area">
+            <input type="text" id="prompt" placeholder="Type your message here..." autocomplete="off">
+            <button id="send" disabled>Send</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
