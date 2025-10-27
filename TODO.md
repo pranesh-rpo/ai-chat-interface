@@ -1,4 +1,4 @@
-# TODO List for Integrating Gemini API
+# TODO List for Integrating Hugging Face OpenAI Model API
 
 - [x] Update script.js to use Hugging Face Inference API with the provided key for "microsoft/DialoGPT-medium" model
 - [x] Test the updated chat interface by running the local server and verifying API calls
@@ -12,3 +12,4 @@
 - [x] Update error message to inform about credit limits
 - [x] Switch from Hugging Face to Gemini API with provided key
 - [x] Change UI theme to black and white
+- [x] Switch back to Hugging Face Router API with OpenAI-compatible model 'openai/gpt-oss-20b:groq'

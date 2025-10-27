@@ -27,21 +27,22 @@ document.addEventListener('DOMContentLoaded', function() {
         const aiMessageDiv = addMessage('Thinking...', 'ai');
 
         try {
-            const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyBu3nzXbZzi9HvoWDYt8o3dtvQco5kYPs0', {
+            const response = await fetch('https://router.huggingface.co/v1/chat/completions', {
                 method: 'POST',
                 headers: {
+                    'Authorization': 'Bearer YOUR_HUGGINGFACE_TOKEN',
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    contents: [
+                    model: 'openai/gpt-oss-20b:groq',
+                    messages: [
                         {
-                            parts: [
-                                {
-                                    text: prompt,
-                                },
-                            ],
+                            role: 'user',
+                            content: prompt,
                         },
                     ],
+                    max_tokens: 100,
+                    temperature: 0.7,
                 })
             });
 
@@ -50,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             const data = await response.json();
-            let content = data.candidates[0].content.parts[0].text;
+            let content = data.choices[0].message.content;
             // Convert markdown bold to HTML
             content = content.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
             // Convert newlines to <br>
