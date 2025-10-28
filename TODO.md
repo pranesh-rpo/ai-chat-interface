@@ -1,4 +1,4 @@
-# TODO List for UI Update to ChatGPT-like Full-Screen Responsive Design
+# TODO List for Switching Back to Gemini API
 
-- [x] Update style.css for full-screen layout, centered chat, responsive design for mobile and PC
-- [x] Test the updated UI on local server
+- [x] Update script.js to use Gemini API instead of Hugging Face Router API
+- [x] Test the updated API integration on local server
